@@ -23,7 +23,7 @@ public class Program {
             System.out.println("Funcionário #" + i + ":");
             System.out.print("Id: ");
             Integer id = sc.nextInt();
-            while (idExistente(listaFuncionarios, id)){
+            while (idExistente(listaFuncionarios, id)) {
                 System.out.print("ID já existente! Tente novamente: ");
                 id = sc.nextInt();
             }
@@ -51,12 +51,12 @@ public class Program {
 
         System.out.println();
         System.out.println("Funcionários:");
-        for (Funcionario f : listaFuncionarios){
+        for (Funcionario f : listaFuncionarios) {
             System.out.println(f);
         }
     }
 
-    public static boolean idExistente(List<Funcionario> listaFuncionarios, int id){
+    public static boolean idExistente(List<Funcionario> listaFuncionarios, int id) {
         Funcionario func = listaFuncionarios.stream().filter(x -> x.getId() == id).findFirst().orElse(null);
         return func != null;
     }

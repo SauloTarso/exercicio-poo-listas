@@ -5,7 +5,7 @@ public class Funcionario {
     private String nome;
     private Double salario;
 
-    public Funcionario(){
+    public Funcionario() {
 
     }
 
@@ -39,12 +39,12 @@ public class Funcionario {
         this.salario = salario;
     }
 
-    public void acrescentarSalario(Double porcentagem){
-        salario += salario  * porcentagem / 100;
+    public void acrescentarSalario(Double porcentagem) {
+        salario += salario * porcentagem / 100;
     }
 
     @Override
     public String toString() {
-        return id + ", " + nome + ", " + String.format("%.2f",salario);
+        return id + ", " + nome + ", " + String.format("%.2f", salario);
     }
 }
